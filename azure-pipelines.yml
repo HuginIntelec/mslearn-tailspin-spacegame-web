@@ -14,6 +14,10 @@ steps:
     packageType: sdk
     version: '6.x'
 
+- powershell: |
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+  displayName: 'Set PowerShell Execution Policy'
+
 - task: UsePythonVersion@0
   inputs:
     addToPath: true
