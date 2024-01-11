@@ -14,14 +14,13 @@ steps:
     packageType: sdk
     version: '6.x'
 
-- script: |
-    dir "$(Agent.ToolsDirectory)\Python"
-  displayName: 'List available Python versions'
-
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.8' # Specify the version of Python to use
     addToPath: true
+
+- script: |
+    python --version
+  displayName: 'Check Python version'
 
 - task: Npm@1
   displayName: 'Run npm install'
