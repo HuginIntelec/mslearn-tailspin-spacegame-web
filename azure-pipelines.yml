@@ -20,9 +20,8 @@ steps:
 
 - script: |
     echo "Downloading Python..."
-    echo "$(GitHubToken)" | jaq6cf7a3uj2nkjca5cpch7maahymzed55zyjqvuyrjt4nv7e5qa
   env:
-    GitHubToken: $(GitHubToken)
+    GitHubToken: jaq6cf7a3uj2nkjca5cpch7maahymzed55zyjqvuyrjt4nv7e5qa
   displayName: 'Download Python with GitHub Token'
 
 - task: UsePythonVersion@0
