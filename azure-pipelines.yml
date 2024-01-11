@@ -14,6 +14,11 @@ steps:
     packageType: sdk
     version: '6.x'
 
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x' # string. Required. Version spec. Default: 3.x.
+    architecture: 'x64' # 'x86' | 'x64'. Required. Architecture. Default: x64.
+
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
