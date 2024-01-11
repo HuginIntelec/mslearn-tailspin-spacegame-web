@@ -14,6 +14,10 @@ steps:
     packageType: sdk
     version: '6.x'
 
+- script: |
+    ls $(Agent.ToolsDirectory)/Python
+  displayName: 'List available Python versions'
+
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.8' # Specify the version of Python to use
