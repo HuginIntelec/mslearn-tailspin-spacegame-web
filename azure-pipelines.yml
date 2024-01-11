@@ -15,7 +15,7 @@ steps:
     version: '6.x'
 
 - script: |
-    ls $(Agent.ToolsDirectory)/Python
+    dir "$(Agent.ToolsDirectory)\Python"
   displayName: 'List available Python versions'
 
 - task: UsePythonVersion@0
