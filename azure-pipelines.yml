@@ -18,16 +18,6 @@ steps:
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
   displayName: 'Set PowerShell Execution Policy'
 
-- task: UsePythonVersion@0
-  inputs:
-    addToPath: true
-  env:
-    GITHUB_TOKEN: $(GitHubToken)
-
-- script: |
-    python --version
-  displayName: 'Check Python version'
-
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
