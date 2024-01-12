@@ -8,13 +8,6 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-  # Use specific version of Python
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.8' # Specify the Python version
-    addToPath: true
-  displayName: 'Use Python 3.8'
-  
 - task: UseDotNet@2
   displayName: 'Use .NET SDK 6.x'
   inputs:
